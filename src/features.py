@@ -16,6 +16,6 @@ def build_features(df: pd.DataFrame) -> pd.DataFrame:
 	
 	df["hour_proxy"] = (df["Time"] // 3600) % 24 
 
-	# df["is_high_amount"] = (df["Amount"] > df["Amount"].quantile(0.95)).astype(int) 
+	df["is_high_amount"] = (df["Amount"] > df["Amount"].quantile(0.95)).astype(int) 
 
 	return df 
