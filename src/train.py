@@ -6,6 +6,7 @@ from sklearn.ensemble import RandomForestClassifier, IsolationForest
 from data import load_data, basic_cleaning 
 from features import build_features 
 
+
 def main(): 
 	
 	print("Loading data... ") 
@@ -63,6 +64,7 @@ def main():
 	joblib.dump(list(X_train.columns), "models/features.joblib")
 	
 	print("Training completed.")
+
 
 if __name__ == "__main__":
 	main() 
